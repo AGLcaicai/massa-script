@@ -14,10 +14,11 @@ check_root() {
 install_env(){
     check_root
     sudo apt install pkg-config curl git build-essential libssl-dev libclang-dev
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     source $HOME/.cargo/env
     rustup toolchain install nightly-2023-01-30
     rustup default nightly-2023-01-30
+    sudo apt update && sudo apt upgrade -y
     git clone --branch testnet https://github.com/massalabs/massa.git
 }
 
