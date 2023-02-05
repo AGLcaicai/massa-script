@@ -23,9 +23,9 @@ install_env(){
 
 install_Massa(){
     echo "开始编译Massa,下方会显示编译状态,编译过程很慢请耐心等待"
-    echo "出现绿色的 ${Green_font_prefix}INFO${Font_color_suffix} 字样后则说明节点编译完成正常运行"
+    echo "出现绿色的 INFO 字样后则说明节点编译完成正常运行"
     echo "之后使用 CTRL+C 退出,使用脚本的 功能3 将节点在后台运行"
-    echo "${Red_font_prefix}请耐心阅读如上信息,脚本将会暂停10秒再开始任务${Font_color_suffix}"
+    echo "请耐心阅读如上信息,脚本将会暂停10秒再开始任务"
     sleep 10
     cd massa/massa-node/
     RUST_BACKTRACE=full cargo run --release -- -p massa |& tee logs.txt
