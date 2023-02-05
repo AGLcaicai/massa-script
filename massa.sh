@@ -103,7 +103,7 @@ echo && echo -e " ${Red_font_prefix}Massa 一键脚本${Font_color_suffix} by \0
  ${Green_font_prefix} 7.导入 Massa 钱包 ${Font_color_suffix}
  ${Green_font_prefix} 9.清除 Massa 日志 ${Font_color_suffix}
  ———————————————————————" && echo
-read -e -p " 请输入数字 [1-8]:" num
+read -e -p " 请输入数字 [1-9]:" num
 case "$num" in
 1)
     install_env
@@ -129,7 +129,6 @@ case "$num" in
 8)
     import_Massa
     ;;
-
 9)
     clean_Massa
     ;;
