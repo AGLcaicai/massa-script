@@ -11,7 +11,7 @@ check_root() {
     [[ $EUID != 0 ]] && echo -e "${Error} 当前非ROOT账号(或没有ROOT权限)，无法继续操作，请更换ROOT账号或使用 ${Green_background_prefix}sudo su${Font_color_suffix} 命令获取临时ROOT权限（执行后可能会提示输入当前账号的密码）。" && exit 1
 }
 
-install_env(){
+install_env_massa(){
     check_root
     sudo apt install pkg-config curl git build-essential libssl-dev libclang-dev
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -28,6 +28,7 @@ install_Massa(){
     echo "之后使用 CTRL+C 退出,使用脚本的 功能3 将节点在后台运行"
     echo "请耐心阅读如上信息,脚本将会暂停10秒再开始任务"
     sleep 10
+    source $HOME/.cargo/env
     cd massa/massa-node/
     RUST_BACKTRACE=full cargo run --release -- -p massa |& tee logs.txt
 }
