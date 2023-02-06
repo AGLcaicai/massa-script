@@ -34,6 +34,7 @@ install_Massa(){
 }
 
 run_Massa(){
+    source $HOME/.cargo/env
     cd massa/massa-node/
     nohup cargo run --release -- -p massa &
     echo "启动成功！节点已在后台运行"
@@ -50,6 +51,7 @@ stop_Massa(){
 client_Massa(){
     echo "正在进入客户端...想退出时使用键盘 CTRL+C"
     sleep 5
+    source $HOME/.cargo/env
     cd massa/massa-client/
     cargo run --release -- -p massa
 }
