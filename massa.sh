@@ -104,7 +104,7 @@ echo && echo -e " ${Red_font_prefix}Massa 一键脚本${Font_color_suffix} by \0
  ${Green_font_prefix} 5.进入 Massa 客户端 ${Font_color_suffix}
  ${Green_font_prefix} 6.升级 Massa 节点 ${Font_color_suffix}
  ${Green_font_prefix} 7.导出 Massa 钱包 ${Font_color_suffix}
- ${Green_font_prefix} 7.导入 Massa 钱包 ${Font_color_suffix}
+ ${Green_font_prefix} 8.导入 Massa 钱包 ${Font_color_suffix}
  ${Green_font_prefix} 9.清除 Massa 日志 ${Font_color_suffix}
  ———————————————————————" && echo
 read -e -p " 请输入数字 [1-9]:" num
